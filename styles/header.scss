@@ -1,0 +1,81 @@
+@import "variables.scss";
+
+.header {
+  padding-left: 80px;
+  padding-top: 40px;
+
+  @include for-large-up {
+    margin: 0;
+    padding: 0 160px;
+    padding-top: 30px;
+  }
+}
+
+.header {
+  display: flex;
+
+  &_button {
+    display: none;
+
+    @include for-large-up {
+      display: block;
+      width: 180px;
+      height: 50px;
+      background-color: $button-color__blue;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: $rich-font;
+      color: $text-color__white;
+      border: none;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 50px;
+
+  &_img {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    margin-right: 10px;
+  }
+
+  &_text {
+    font-size: 20px;
+    font-weight: $rich-font;
+    line-height: 30px;
+    color: $text-color__primary-blue;
+    margin: 0;
+  }
+}
+
+.nav {
+  display: none;
+
+  @include for-large-up {
+    display: block;
+
+    margin-left: auto;
+  }
+  &-list {
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+
+    &_item {
+      font-size: 14px;
+      line-height: 50px;
+      color: #000;
+      width: 120px;
+      height: 50px;
+
+      &:last-child {
+        width: 180px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
